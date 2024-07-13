@@ -1,0 +1,78 @@
+body {
+    background-image: url("https://spaceplace.nasa.gov/review/blue-sky/bluesky.en.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  
+  .supermen {
+    position: absolute;
+    width: 100px; 
+    animation: flySupermen 10s ease-in forwards;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .plane {
+    position: absolute;
+    width: 150px; 
+    animation: flyPlane 20s ease-in-out forwards; 
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .sun {
+  
+    position: absolute;
+    width: 200px; 
+    animation: flySun 20s linear infinite;
+    left: 50%; 
+    top: 10%; 
+  }
+  
+  .birds {
+    position: absolute;
+    width: 300px; 
+    animation: flyBirds 20s ease-in infinite 3s; 
+    bottom: 0; 
+    right: 0; 
+    transform: rotate(-30deg);
+  }
+  
+  @keyframes flyPlane {
+    0% {
+      transform: translateX(0) translateY(-50%);
+    }
+    100% {
+      transform: translateX(100vw) translateY(-50%);
+    }
+  }
+  
+  @keyframes flySupermen {
+    0% {
+      transform: translateX(-100%) translateY(-90%);
+    }
+    100% {
+      transform: translateX(100vw) translateY(-50%);
+    }
+  }
+  
+  @keyframes flySun {
+    0% {
+      transform: translateX(-100%) translateY(-50%) rotate(0);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes flyBirds {
+    0% {
+      transform: translateX(0) translateY(0) rotate(-30deg);
+    }
+    100% {
+      transform: translateX(-100vw) translateY(-100vh) rotate(-30deg);
+    }
+  }
+  
